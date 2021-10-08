@@ -1,0 +1,67 @@
+@import './variables';
+
+main {
+  @include centerFlexColumn(flex);
+  padding: 8rem;
+  height: auto;
+  width: 45vw;
+  margin: 7vh auto 1vh auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 15px;
+  background-color: #aed9e0;
+}
+
+.s_content {
+  background-color: #e73c7e;
+  width: auto;
+  height: auto;
+  margin: 2vh;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px dotted #e7723c;
+  .hiddenSC {
+    @include centerFlexColumn(column);
+    display: none;
+    padding: 2vh;
+    border-radius: 20px;
+    color: white;
+    //text-align: center;
+    transition: opacity 1200ms;
+    will-change: opacity;
+    p {
+      margin-bottom: 2vh;
+    }
+    .link_div {
+      margin: auto;
+      background: #23a6d5;
+      border-radius: 20px;
+      width: 50%;
+      transition: 1.5s;
+      &:hover {
+        @include animationGrad(12s);
+        background: $gradient;
+        background-size: 200% 200%;
+      }
+    }
+    .h_a {
+      font-weight: bold;
+      color: white;
+      align-self: center;
+      transition: 1.2s;
+    }
+  }
+
+  .reveal {
+    transition: opacity 1200ms;
+    will-change: opacity;
+    padding: 2vh 2vw 2vh 2vw;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    //transition-duration: 1s;
+  }
+  .reveal:hover {
+    font-size: 112%;
+  }
+}

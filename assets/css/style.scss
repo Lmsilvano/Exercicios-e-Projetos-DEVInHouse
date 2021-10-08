@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Cabin', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import './variables';
+
+//                            Retirada de alguns estilos predefinidos e acrescimo de outros
+
+a {
+  color: inherit;
+  padding: 1vw;
+}
+a:hover {
+  font-size: 110%;
+  text-decoration: underline;
+}
+body {
+  @include centerFlexColumn(column);
+  background-color: #e6e6ea;
+}
+
+/*                            Estilização do Body                               */
+
+@import './header';
+@import './main';

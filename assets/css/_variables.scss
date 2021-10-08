@@ -1,0 +1,33 @@
+@mixin centerFlexColumn($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+@mixin animationGrad($temp) {
+  animation: gradient $temp ease infinite;
+}
+$gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+
+/*                              Animações                                        */
+@mixin fadeout($duration) {
+  transition: opacity $duration;
+  will-change: opacity;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.faded-out {
+  opacity: 0;
+}
