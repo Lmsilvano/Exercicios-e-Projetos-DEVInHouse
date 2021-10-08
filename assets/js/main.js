@@ -2,16 +2,15 @@ const sContent = document.querySelectorAll(".s_content")
 const tl = new TimelineMax()
 
 function animation(arg) {
-    tl.fromTo(arg, 1, { height: "0vh" }, { height: "30vh", ease: Power2.easeInOut });
+    tl.fromTo(arg, 1, { height: "0%" }, { height: "100%", ease: Power2.easeInOut });
 
 }
 
 function animationO(elem, arg) {
     if (arg === 'in') {
-        console.log('entrei')
-        elem.style = 'opacity: 1;';
+        elem.classList.add('faded-in');
         requestAnimationFrame(() => {
-            elem.style = 'opacity: 0;';
+            elem.classList.remove('faded-in');
         });
     } else {
         elem.classList.add('faded-out');
@@ -37,8 +36,8 @@ document.addEventListener("click", function (e) {
         divreveal.addEventListener("mouseleave", function (e2) {
             e2.preventDefault();
             divreveal.style.display = "none"
-            el.style.display = "block"
-            console.log('foi embora')
+            animationO(el, 'oi')
+            el.style.display = 'block'
 
         })
 
