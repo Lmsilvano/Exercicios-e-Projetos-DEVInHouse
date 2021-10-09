@@ -12,46 +12,29 @@ main {
 }
 
 .s_content {
+  @include centerFlexColumn(column);
+  flex: 1;
+  word-break: normal;
   background-color: #e73c7e;
   width: auto;
-  height: auto;
+  //height: 450px;
   margin: 2vh;
   border-radius: 20px;
   text-align: center;
   border: 3px dotted #e7723c;
-  .hiddenSC {
-    @include centerFlexColumn(column);
-    display: none;
-    padding: 2vh;
-    border-radius: 20px;
-    color: white;
-    //text-align: center;
-    transition: opacity 1200ms;
-    will-change: opacity;
-    p {
-      margin-bottom: 2vh;
-    }
-    .link_div {
-      margin: auto;
-      background: #23a6d5;
-      border-radius: 20px;
-      width: 50%;
-      transition: 1.5s;
-      &:hover {
-        @include animationGrad(12s);
-        background: $gradient;
-        background-size: 200% 200%;
-      }
-    }
-    .h_a {
-      font-weight: bold;
-      color: white;
-      align-self: center;
-      transition: 1.2s;
-    }
+  transition: height 1200ms;
+  will-change: height;
+  &:hover {
+    animation: grow 5s ease 1;
+    height: 450px;
+    //.hiddenSC {
+    //display: flex;
+    // }
   }
-
   .reveal {
+    flex: -1;
+    width: 100%;
+    word-break: normal;
     transition: opacity 1200ms;
     will-change: opacity;
     padding: 2vh 2vw 2vh 2vw;
@@ -63,5 +46,56 @@ main {
   }
   .reveal:hover {
     font-size: 112%;
+  }
+  .hiddenSC {
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    max-height: 100%;
+    //flex: 1;
+    //@include centerFlexColumn(column);
+    display: none;
+    flex-direction: column;
+    padding: 2vh;
+    border-radius: 20px;
+    color: white;
+    //text-align: center;
+    transition: opacity 1200ms;
+    will-change: opacity;
+    p {
+      flex: 1;
+      width: 100%;
+      max-height: 100%;
+      align-self: flex-start;
+    }
+    .link_div {
+      height: auto;
+      width: auto;
+      position: relative;
+      top: 0;
+      flex-wrap: nowrap;
+      word-break: keep-all;
+      //border: 3px solid blue;
+      flex: -1;
+      align-self: stretch;
+      margin: 2vh auto 1vh auto;
+      background: #23a6d5;
+      border-radius: 20px;
+      width: 50%;
+      transition: 1.5s;
+      &:hover {
+        @include animationGrad(12s);
+        background: $gradient;
+        background-size: 200% 200%;
+      }
+    }
+    .h_a {
+      flex-wrap: nowrap;
+      word-break: keep-all;
+      font-weight: bold;
+      color: white;
+      align-self: center;
+      transition: 1.2s;
+    }
   }
 }
