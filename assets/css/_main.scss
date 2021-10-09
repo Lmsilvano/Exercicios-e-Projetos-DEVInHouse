@@ -24,13 +24,12 @@ main {
   border: 3px dotted #e7723c;
   transition: height 1200ms;
   will-change: height;
-  &:hover {
-    animation: grow 5s ease 1;
-    height: 450px;
-    //.hiddenSC {
-    //display: flex;
-    // }
-  }
+  //&:hover {
+  //height: 450px;
+  //.hiddenSC {
+  //display: flex;
+  // }
+  //}
   .reveal {
     flex: -1;
     width: 100%;
@@ -52,15 +51,13 @@ main {
     justify-content: space-around;
     flex: 1;
     max-height: 100%;
-    //flex: 1;
-    //@include centerFlexColumn(column);
     display: none;
     flex-direction: column;
     padding: 2vh;
     border-radius: 20px;
     color: white;
     //text-align: center;
-    transition: opacity 1200ms;
+    transition: opacity 1400ms;
     will-change: opacity;
     p {
       flex: 1;

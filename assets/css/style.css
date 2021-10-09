@@ -333,12 +333,6 @@ main {
   will-change: height;
 }
 
-.s_content:hover {
-  -webkit-animation: grow 5s ease 1;
-          animation: grow 5s ease 1;
-  height: 450px;
-}
-
 .s_content .reveal {
   -webkit-box-flex: -1;
       -ms-flex: -1;
@@ -377,8 +371,8 @@ main {
   padding: 2vh;
   border-radius: 20px;
   color: white;
-  -webkit-transition: opacity 1200ms;
-  transition: opacity 1200ms;
+  -webkit-transition: opacity 1400ms;
+  transition: opacity 1400ms;
   will-change: opacity;
 }
 
