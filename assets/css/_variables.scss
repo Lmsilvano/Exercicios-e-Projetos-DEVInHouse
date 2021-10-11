@@ -28,28 +28,6 @@ $gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat
   }
 }
 
-@keyframes grow {
-  0% {
-    height: auto;
-  }
-  20% {
-    height: 150px;
-  }
-  40% {
-    height: 225px;
-  }
-  60% {
-    height: 300px;
-  }
-  80% {
-    height: 375px;
-  }
-
-  100% {
-    height: 450px;
-  }
-}
-
 .faded-out {
   opacity: 0;
 }

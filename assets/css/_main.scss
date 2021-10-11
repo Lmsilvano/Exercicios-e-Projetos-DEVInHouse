@@ -47,6 +47,8 @@ main {
     font-size: 112%;
   }
   .hiddenSC {
+    transition: opacity 1200ms;
+    will-change: opacity;
     align-items: center;
     justify-content: space-around;
     flex: 1;
@@ -57,8 +59,6 @@ main {
     border-radius: 20px;
     color: white;
     //text-align: center;
-    transition: opacity 1400ms;
-    will-change: opacity;
     p {
       flex: 1;
       width: 100%;
@@ -68,13 +68,11 @@ main {
     .link_div {
       height: auto;
       width: auto;
-      position: relative;
-      top: 0;
+      @include centerFlexColumn(flex);
       flex-wrap: nowrap;
+      padding: 0;
       word-break: keep-all;
-      //border: 3px solid blue;
       flex: -1;
-      align-self: stretch;
       margin: 2vh auto 1vh auto;
       background: #23a6d5;
       border-radius: 20px;
@@ -87,7 +85,7 @@ main {
       }
     }
     .h_a {
-      flex-wrap: nowrap;
+      width: auto;
       word-break: keep-all;
       font-weight: bold;
       color: white;

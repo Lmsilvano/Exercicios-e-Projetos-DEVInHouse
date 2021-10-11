@@ -1,12 +1,19 @@
-const sContent = document.querySelectorAll(".s_content")
-const tl = new TimelineMax()
 
+function animationGrow(elem, arg) {
+    if (arg === 'reduce') {
+        elem.style = 'height:450px'
+        requestAnimationFrame(() => {
+            elem.style = 'height: auto;';
+        });
+        return
+    } else {
+        elem.style = 'height:0px'
+        requestAnimationFrame(() => {
+            elem.style = 'height: 450px';
 
-function animationGrow(elem) {
-    elem.style = 'height:0px'
-    requestAnimationFrame(() => {
-        elem.style = 'height: 450px';
-    });
+        })
+        return
+    };
 }
 function animationO(elem, arg) {
     if (arg === 'in') {
@@ -37,34 +44,29 @@ function animationO(elem, arg) {
 
 
 document.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     const el = e.target;
     if (el.classList.contains('reveal')) {
         let divreveal = el.nextElementSibling;
         let parent = el.parentElement;
-        animationGrow(parent)
+
+        animationO(el, 'in')
+        el.style.display = 'none'
+        setTimeout(() => {
+            animationGrow(parent)
+        }, 150)
         setTimeout(() => {
             animationO(divreveal, 'oi')
-            divreveal.style = "display:flex; flex-direction: column"
+            divreveal.style = "display:flex;"
         }, 650)
-        animationO(el, 'in')
-        // if (el.style.opacity === '0') {
-        //     animationO(el, 'out')
-        //     return
-        // } else {
-        //     animationO(el, 'in')
-        //     // setTimeout(() => {
-        //     //     el.remove();
-        //     // }, 1500)
-
-        // }
-
-
-        parent.addEventListener("mouseleave", function (e2) {
-            animationO(divreveal, 'in')
-
-        })
+        return
 
     };
+
+    if (el.classList.contains('hiddenSC')) {
+        console.log('algumacoisa')
+        return
+    }
+
 });
 
