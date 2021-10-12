@@ -1,6 +1,6 @@
 @import './variables';
 
-#header {
+.l-header {
   width: 100vw;
   @include animationGrad(20s);
   @include centerFlexColumn(column);

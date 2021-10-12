@@ -122,7 +122,7 @@ body {
           justify-content: center;
 }
 
-#header {
+.l-header {
   width: 100vw;
   -webkit-animation: gradient 20s ease infinite;
           animation: gradient 20s ease infinite;
@@ -196,7 +196,7 @@ body {
           justify-content: center;
 }
 
-main {
+.l-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

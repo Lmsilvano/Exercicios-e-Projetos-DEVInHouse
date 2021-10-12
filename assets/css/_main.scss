@@ -1,6 +1,6 @@
 @import './variables';
 
-main {
+.l-main {
   @include centerFlexColumn(flex);
   padding: 8rem;
   height: auto;
