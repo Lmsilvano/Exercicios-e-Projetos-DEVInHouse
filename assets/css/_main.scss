@@ -17,21 +17,28 @@ main {
   word-break: normal;
   background-color: #e73c7e;
   width: auto;
-  //height: 450px;
+  height: 450px;
   margin: 2vh;
   border-radius: 20px;
   text-align: center;
   border: 3px dotted #e7723c;
   transition: height 1200ms;
   will-change: height;
-  //&:hover {
-  //height: 450px;
-  //.hiddenSC {
-  //display: flex;
-  // }
-  //}
+  overflow: hidden;
+  &:hover {
+    height: 450px;
+  }
+  &:hover > .hiddenSC {
+    //background-color: red;
+    display: flex;
+    opacity: 1;
+    //transform: translateY(0px);
+  }
   .reveal {
+    text-align: center;
+    border: 2px solid blue;
     flex: -1;
+    //margin-top: 50px;
     width: 100%;
     word-break: normal;
     transition: opacity 1200ms;
@@ -44,16 +51,20 @@ main {
     //transition-duration: 1s;
   }
   .reveal:hover {
-    font-size: 112%;
+    opacity: 0;
   }
   .hiddenSC {
-    transition: opacity 1200ms;
+    opacity: 0;
+    //transform: translateY(150px);
+    //transition: transform 2350ms;
+    //will-change: display;
+    transition: opacity 2400ms;
     will-change: opacity;
     align-items: center;
     justify-content: space-around;
     flex: 1;
     max-height: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 2vh;
     border-radius: 20px;

@@ -1,4 +1,5 @@
 
+const divao = document.getElementsByClassName('s_content')
 function animationGrow(elem, arg) {
     if (arg === 'reduce') {
         elem.style = 'height:450px'
@@ -40,33 +41,36 @@ function animationO(elem, arg) {
 }
 
 
+
+
 //w 319 h 390
 
 
-document.addEventListener("click", function (e) {
-    // e.preventDefault();
-    const el = e.target;
-    if (el.classList.contains('reveal')) {
-        let divreveal = el.nextElementSibling;
-        let parent = el.parentElement;
 
-        animationO(el, 'in')
-        el.style.display = 'none'
-        setTimeout(() => {
-            animationGrow(parent)
-        }, 150)
-        setTimeout(() => {
-            animationO(divreveal, 'oi')
-            divreveal.style = "display:flex;"
-        }, 650)
-        return
+// document.addEventListener("click", function (e) {
+//     // e.preventDefault();
+//     const el = e.target;
+//     if (el.classList.contains('reveal')) {
+//         let divreveal = el.nextElementSibling;
+//         let parent = el.parentElement;
 
-    };
+//         animationO(el, 'in')
+//         el.style.display = 'none'
+//         setTimeout(() => {
+//             animationGrow(parent)
+//         }, 150)
+//         setTimeout(() => {
+//             animationO(divreveal, 'oi')
+//             divreveal.style = "display:flex;"
+//         }, 650)
+//         return
 
-    if (el.classList.contains('hiddenSC')) {
-        console.log('algumacoisa')
-        return
-    }
+//     };
 
-});
+//     if (el.classList.contains('hiddenSC')) {
+//         console.log('algumacoisa')
+//         return
+//     }
+
+// });
 
