@@ -17,7 +17,6 @@ main {
   word-break: normal;
   background-color: #e73c7e;
   width: auto;
-  height: 450px;
   margin: 2vh;
   border-radius: 20px;
   text-align: center;
@@ -25,51 +24,35 @@ main {
   transition: height 1200ms;
   will-change: height;
   overflow: hidden;
-  &:hover {
-    height: 450px;
-  }
-  &:hover > .hiddenSC {
-    //background-color: red;
-    display: flex;
-    opacity: 1;
-    //transform: translateY(0px);
-  }
   .reveal {
-    text-align: center;
-    border: 2px solid blue;
+    justify-content: center;
     flex: -1;
-    //margin-top: 50px;
     width: 100%;
     word-break: normal;
-    transition: opacity 1200ms;
+    transition: opacity 1000ms;
     will-change: opacity;
     padding: 2vh 2vw 2vh 2vw;
     cursor: pointer;
     font-size: medium;
     font-weight: bold;
     color: white;
-    //transition-duration: 1s;
-  }
-  .reveal:hover {
-    opacity: 0;
   }
   .hiddenSC {
-    opacity: 0;
-    //transform: translateY(150px);
-    //transition: transform 2350ms;
-    //will-change: display;
-    transition: opacity 2400ms;
+    transition: opacity 1200ms;
     will-change: opacity;
     align-items: center;
     justify-content: space-around;
     flex: 1;
     max-height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 2vh;
     border-radius: 20px;
     color: white;
-    //text-align: center;
+    i {
+      font-size: larger;
+      margin-bottom: 2vh;
+    }
     p {
       flex: 1;
       width: 100%;
@@ -77,17 +60,11 @@ main {
       align-self: flex-start;
     }
     .link_div {
-      height: auto;
-      width: auto;
       @include centerFlexColumn(flex);
       flex-wrap: nowrap;
-      padding: 0;
       word-break: keep-all;
-      flex: -1;
-      margin: 2vh auto 1vh auto;
       background: #23a6d5;
       border-radius: 20px;
-      width: 50%;
       transition: 1.5s;
       &:hover {
         @include animationGrad(12s);

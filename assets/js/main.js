@@ -1,14 +1,12 @@
-
-const divao = document.getElementsByClassName('s_content')
 function animationGrow(elem, arg) {
     if (arg === 'reduce') {
         elem.style = 'height:450px'
         requestAnimationFrame(() => {
-            elem.style = 'height: auto;';
+            elem.style = 'height: 50px';
         });
         return
     } else {
-        elem.style = 'height:0px'
+        elem.style = 'height:50px'
         requestAnimationFrame(() => {
             elem.style = 'height: 450px';
 
@@ -18,59 +16,57 @@ function animationGrow(elem, arg) {
 }
 function animationO(elem, arg) {
     if (arg === 'in') {
-        elem.style = 'opacity:1'
+        elem.style = 'display: flex; opacity: 1;'
         requestAnimationFrame(() => {
-            elem.style = 'opacity: 0';
+            elem.style = 'display: flex; opacity: 0;';
         });
         return
-
     } else if (arg === 'out') {
-        elem.style = 'opacity:0'
+        elem.style = 'display: flex; opacity: 0;'
         requestAnimationFrame(() => {
-            elem.style = 'opacity: 1';
-        });
-        return
+            elem.style = 'display: flex; opacity: 1;';
 
-    } else {
-        elem.classList.add('faded-out');
-        requestAnimationFrame(() => {
-            elem.classList.remove('faded-out');
         });
         return
     }
 }
 
 
+document.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const el = e.target;
+    if (el.classList.contains('reveal')) {
+        let divreveal = el.nextElementSibling;
+        let parent = el.parentElement;
+
+        animationO(el, 'in')
+        setTimeout(() => {
+            animationGrow(parent)
+        }, 150)
+        setTimeout(() => {
+            animationO(divreveal, 'out')
+        }, 650)
+        parent.addEventListener("mouseleave", (e2) => {
+            e2.stopPropagation();
+            if (parent.style.height === '50px') {
+                e2.stopImmediatePropagation();;
+                return
+            }
+            setTimeout(() => {
+                animationO(divreveal, 'in')
+            }, 350)
+            setTimeout(() => {
+                animationGrow(parent, 'reduce')
+                divreveal.style = 'display: none;'
+            }, 750)
+            setTimeout(() => {
+                animationO(el, 'out')
+            }, 950)
+
+        })
 
 
-//w 319 h 390
 
+    };
 
-
-// document.addEventListener("click", function (e) {
-//     // e.preventDefault();
-//     const el = e.target;
-//     if (el.classList.contains('reveal')) {
-//         let divreveal = el.nextElementSibling;
-//         let parent = el.parentElement;
-
-//         animationO(el, 'in')
-//         el.style.display = 'none'
-//         setTimeout(() => {
-//             animationGrow(parent)
-//         }, 150)
-//         setTimeout(() => {
-//             animationO(divreveal, 'oi')
-//             divreveal.style = "display:flex;"
-//         }, 650)
-//         return
-
-//     };
-
-//     if (el.classList.contains('hiddenSC')) {
-//         console.log('algumacoisa')
-//         return
-//     }
-
-// });
-
+});
