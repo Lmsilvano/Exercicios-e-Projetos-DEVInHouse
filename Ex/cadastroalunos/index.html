@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 01/09</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2232af5fca.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: 'DM Serif Display', serif;
+      }
+
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+
+        .relatorio * {
+          visibility: visible;
+        }
+
+        .relatorio {
+          position: fixed;
+          left: 0;
+          top: 0;
+        }
+      }
+      #headforprint {
+        visibility: hidden;
+      }
+      header {
+        border-radius: 0 0 80px 80px;
+        background-color: rgb(236, 178, 17);
+        height: auto;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 6em;
+        display: inline;
+      }
+      .formulariosec {
+        display: block;
+      }
+
+      form {
+        margin: 5em;
+        padding: 2em;
+        display: block;
+      }
+
+      form > input {
+        padding-left: 10px;
+      }
+
+      input,
+      button,
+      label {
+        border-radius: 50px;
+        font-size: 20px;
+        background: none;
+        display: block;
+      }
+
+      .marcas select {
+        font-size: 20px;
+      }
+
+      .relatorio {
+        margin: 5em;
+      }
+
+      .relatorios p {
+        display: inline;
+        font-size: 2vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1 class="logo">Juquinha.</h1>
+        <strong>School</strong>
+      </div>
+    </header>
+
+    <section class="formulariosec">
+      <form action="index.html" method="POST" id="formulario">
+        <label for="aluno">Aluno:</label>
+        <input type="text" id="aluno" placeholder="Ex: aluno1;aluno2;aluno3" />
+        <label for="nota1">Nota 1:</label>
+        <input type="text" id="nota1" placeholder="Ex: nota1;nota1;nota1" />
+        <label for="nota2">Nota 2:</label>
+        <input type="text" id="nota2" placeholder="Ex: nota2;nota2;nota2" />
+        <label for="nota3">Nota 3:</label>
+        <input type="text" id="nota3" placeholder="Ex: nota3;nota3;nota3" />
+        <br />
+        <br />
+        <br />
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </section>
+
+    <section class="relatorio">
+      <h1>Relatório</h1>
+      <div class="relatorios">
+        <p class="aluno"></p>
+      </div>
+
+      <button class="btn-rel">Imprimir relatório</button>
+    </section>
+
+    <script src="./form.js"></script>
+  </body>
+</html>

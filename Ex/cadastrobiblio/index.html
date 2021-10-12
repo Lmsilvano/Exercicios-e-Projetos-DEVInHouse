@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria do Juca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2232af5fca.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: 'DM Serif Display', serif;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:hover {
+        color: #434a42;
+        font-size: 112%;
+      }
+
+      body {
+        background-color: #c3baba;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        border-radius: 0 0 80px 80px;
+        background-color: rgb(236, 178, 17);
+        height: auto;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 6em;
+        margin-bottom: 2vh;
+      }
+
+      .menu {
+        margin-bottom: 2vh;
+      }
+
+      .menulist ul li {
+        display: inline;
+        padding-right: 1vw;
+        font-size: 1.5em;
+      }
+
+      li:hover {
+        color: #434a42;
+        text-decoration: underline;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        background-color: #434a42;
+        text-align: center;
+        margin: auto;
+        margin-top: 3vh;
+        width: 30vw;
+        border-radius: 20px;
+      }
+
+      form {
+        margin: auto;
+        padding: 2em;
+        display: block;
+      }
+
+      label {
+        color: white;
+        font-size: 1.2em;
+      }
+
+      input,
+      button {
+        border-radius: 50px;
+        font-size: 20px;
+        background: white;
+        padding-left: 1vw;
+      }
+
+      button {
+        padding: 0.2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1 class="logo">JucaBooks</h1>
+      </div>
+      <div class="menu">
+        <nav class="menulist">
+          <ul>
+            <li>
+              <i class="fa fa-home mr"></i>
+              <a href="./index.html">Cadastro</a>
+            </li>
+            <li>
+              <i class="fas fa-book"></i>
+              <a href="./biblioteca.html">Biblioteca</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <form action="form.html" method="POST" id="formulario">
+        <label for="tittle">Título</label>
+        <br />
+        <input type="text" id="tittle" placeholder="Digite o Título" />
+        <br />
+        <br />
+        <label for="subtittle">Subtitulo</label>
+        <br />
+        <input type="text" id="subtittle" placeholder="Digite o Subtitulo" />
+        <br />
+        <br />
+        <label for="edit">Editora</label>
+        <br />
+        <input type="text" id="edit" placeholder="Digite a Editora" />
+        <br />
+        <br />
+        <label for="autor">Autor</label>
+        <br />
+        <input type="text" id="autor" placeholder="Digite o Autor" />
+        <br />
+        <br />
+        <label for="pages">Paginas</label>
+        <br />
+        <input type="text" id="pages" placeholder="Digite o nº de páginas" />
+        <br />
+        <br />
+        <label for="preco">Preço</label>
+        <br />
+        <input type="text" id="preco" placeholder="Digite o preço" />
+        <br />
+        <br />
+        <label for="isbn">ISBN</label>
+        <br />
+        <input type="text" id="isbn" placeholder="Digite o ISBN" />
+        <br />
+        <br />
+        <label for="ano">Ano de Publicação</label>
+        <br />
+        <input type="text" id="ano" placeholder="Digite o ano de publicação" />
+        <br />
+        <br />
+        <label for="urlimg">URL da Imagem</label>
+        <br />
+        <input type="text" id="urlimg" placeholder="www.ex.com/image.jpg" />
+        <br />
+        <br />
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <script src="./library.js"></script>
+  </body>
+</html>

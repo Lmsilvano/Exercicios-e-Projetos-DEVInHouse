@@ -1,14 +1,14 @@
 function animationGrow(elem, arg) {
     if (arg === 'reduce') {
-        elem.style = 'height:450px'
+        elem.style = 'height:550px'
         requestAnimationFrame(() => {
-            elem.style = 'height: 50px';
+            elem.style = 'height: 90px';
         });
         return
     } else {
-        elem.style = 'height:50px'
+        elem.style = 'height:90px'
         requestAnimationFrame(() => {
-            elem.style = 'height: 450px';
+            elem.style = 'height: 550px';
 
         })
         return
@@ -48,7 +48,8 @@ document.addEventListener("click", function (e) {
         }, 650)
         parent.addEventListener("mouseleave", (e2) => {
             e2.stopPropagation();
-            if (parent.style.height === '50px') {
+            console.log(e2)
+            if (parent.style.height === '90px') {
                 e2.stopImmediatePropagation();;
                 return
             }
@@ -56,16 +57,15 @@ document.addEventListener("click", function (e) {
                 animationO(divreveal, 'in')
             }, 350)
             setTimeout(() => {
-                animationGrow(parent, 'reduce')
                 divreveal.style = 'display: none;'
+                animationGrow(parent, 'reduce')
             }, 750)
             setTimeout(() => {
                 animationO(el, 'out')
+                divreveal.style = 'display: none;'
             }, 950)
 
         })
-
-
 
     };
 
