@@ -9,7 +9,7 @@
   margin: 7vh auto 1vh auto;
   box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
   border-radius: 15px;
-  background-color: rgba(174, 217, 224, 0.6);
+  background-color: rgba(174, 217, 224, 0.5);
 }
 
 .s_content {
@@ -25,9 +25,12 @@
   border-radius: 20px;
   text-align: center;
   border: 3px dotted #e7723c;
-  transition: height 1200ms;
-  will-change: height;
+  transition: height 1100ms, opacity 1300ms;
+  will-change: height, opacity;
+  //transition: opacity 1600ms;
+  //will-change: opacity;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   .reveal {
     justify-content: center;
     flex: -1;
@@ -85,4 +88,14 @@
       transition: 1.2s;
     }
   }
+}
+#M-navmenu {
+  color: #e73c7e;
+  opacity: 1;
+  display: flex;
+  cursor: pointer;
+  transition: opacity 1200ms;
+  will-change: opacity;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2),
+    0px -4px 10px rgba(255, 255, 255, 0.1);
 }

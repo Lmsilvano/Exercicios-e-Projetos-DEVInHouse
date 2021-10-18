@@ -13,12 +13,18 @@
 }
 .h_content {
   margin: 2vh;
+  #navmenu {
+    cursor: unset;
+    opacity: 0;
+    transition: opacity 1750ms;
+    will-change: opacity;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+      0px -4px 10px rgba(255, 255, 255, 0.3);
+  }
 }
 
 .li_menu {
   display: inline;
   font-size: larger;
   font-weight: bold;
-  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
 }

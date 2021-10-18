@@ -81,6 +81,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Cabin', sans-serif;
   background-color: #e6e6ea;
 }
 
@@ -152,11 +153,19 @@ body {
   margin: 2vh;
 }
 
+.h_content #navmenu {
+  cursor: unset;
+  opacity: 0;
+  -webkit-transition: opacity 1750ms;
+  transition: opacity 1750ms;
+  will-change: opacity;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
 .li_menu {
   display: inline;
   font-size: larger;
   font-weight: bold;
-  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 /*                              Animações                                        */
@@ -219,7 +228,7 @@ body {
   -webkit-box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
   border-radius: 15px;
-  background-color: rgba(174, 217, 224, 0.6);
+  background-color: rgba(174, 217, 224, 0.5);
 }
 
 .s_content {
@@ -249,10 +258,12 @@ body {
   border-radius: 20px;
   text-align: center;
   border: 3px dotted #e7723c;
-  -webkit-transition: height 1200ms;
-  transition: height 1200ms;
-  will-change: height;
+  -webkit-transition: height 1100ms, opacity 1300ms;
+  transition: height 1100ms, opacity 1300ms;
+  will-change: height, opacity;
   overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .s_content .reveal {
@@ -352,5 +363,18 @@ body {
       align-self: center;
   -webkit-transition: 1.2s;
   transition: 1.2s;
+}
+
+#M-navmenu {
+  color: #e73c7e;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: opacity 1200ms;
+  transition: opacity 1200ms;
+  will-change: opacity;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2), 0px -4px 10px rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
