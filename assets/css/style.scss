@@ -20,12 +20,16 @@ a:hover {
   text-decoration: underline;
 }
 body {
-  @include centerFlexColumn(column);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Cabin', sans-serif;
-  background-color: #e6e6ea;
+  height: 100vh;
 }
 
 /*                            Estilização do Body                               */
 
 @import './header';
 @import './main';
+@import './footer';
