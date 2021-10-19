@@ -143,17 +143,25 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
   background-size: 300% 300%;
   color: white;
-  height: 18vh;
+  height: auto;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 0 0 30px 30px;
 }
 
 .h_content {
-  margin: 2vh;
+  margin-bottom: 2vh;
 }
 
-.h_content #navmenu {
+.h_content h1 {
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.nav_content {
+  margin-bottom: 4vh;
+}
+
+.nav_content #navmenu {
   cursor: unset;
   opacity: 0;
   -webkit-transition: opacity 1750ms;
