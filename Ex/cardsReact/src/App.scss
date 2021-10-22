@@ -1,0 +1,89 @@
+.title {
+  text-align: center;
+  color: tomato;
+  font-size: larger;
+  font-size: 200%;
+}
+.main {
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* .square {
+  width: 40px;
+  height: 40px;
+  background-color: yellowgreen;
+  margin-top: 5px;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: aquamarine;
+  border-radius: 100%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid red;
+}
+
+.rectangle {
+  width: 80px;
+  height: 40px;
+  background-color: plum;
+} */
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  width: 500px;
+  height: auto;
+  background: linear-gradient(96deg, #5bc8a4 13%, #fd2dd5 99%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+  gap: 13px;
+  .c_cards {
+    background: linear-gradient(96deg, #9e35bd 13%, blueviolet 99%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35%) 1.95px 1.95px 2.6px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 25%;
+    svg {
+      height: 100%;
+      width: 30%;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+    .c_cardsContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 2;
+      .name {
+        letter-spacing: 1px;
+        font-size: 140%;
+      }
+      .desc {
+        font-weight: 640;
+      }
+      .name,
+      .desc {
+        margin: 0;
+      }
+    }
+  }
+}
